@@ -1,23 +1,187 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x44-Eb-Cij"/>
+                        <viewControllerLayoutGuide type="bottom" id="zrR-9W-tS9"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MainMenu.png" translatesAutoresizingMaskIntoConstraints="NO" id="QVQ-pA-ahq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Space Invaders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="123-pw-2h6">
+                                <rect key="frame" x="20" y="171" width="280" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shoot and kill the aliening Monsters, but make sure to avoid the bullets from the army behind the aliens" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="LFi-zo-1DS">
+                                <rect key="frame" x="20" y="267" width="280" height="119"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gj4-fq-XeB">
+                                <rect key="frame" x="53" y="404" width="214" height="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iCl-Yz-DP4" kind="modal" id="wmx-R2-CVn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="175" y="9"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="FZd-EZ-1PT">
+            <objects>
+                <viewController id="iCl-Yz-DP4" customClass="Game" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bwx-0n-gWi"/>
+                        <viewControllerLayoutGuide type="bottom" id="oQL-pQ-QVw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MxA-Vx-zgU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LuT-Kw-QRv">
+                                <rect key="frame" x="62" y="242" width="197" height="37"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Start:" destination="iCl-Yz-DP4" eventType="touchUpInside" id="dNP-Es-30J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCo-DR-FV6">
+                                <rect key="frame" x="62" y="287" width="197" height="39"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="toO-8b-zXm"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ship.png" translatesAutoresizingMaskIntoConstraints="NO" id="YGD-o8-rA7">
+                                <rect key="frame" x="136" y="504" width="54" height="44"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bullets.png" translatesAutoresizingMaskIntoConstraints="NO" id="n9f-cu-t6H">
+                                <rect key="frame" x="197" y="547" width="6" height="21"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GreenMonster.png" translatesAutoresizingMaskIntoConstraints="NO" id="28b-md-EmQ">
+                                <rect key="frame" x="32" y="30" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GreenMonster.png" translatesAutoresizingMaskIntoConstraints="NO" id="pPe-qV-IKn">
+                                <rect key="frame" x="138" y="30" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GreenMonster.png" translatesAutoresizingMaskIntoConstraints="NO" id="xM6-sx-5Zk">
+                                <rect key="frame" x="249" y="30" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="YellowMonster.png" translatesAutoresizingMaskIntoConstraints="NO" id="6wS-GR-2FK">
+                                <rect key="frame" x="20" y="83" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="YellowMonster.png" translatesAutoresizingMaskIntoConstraints="NO" id="hyn-gE-Uxi">
+                                <rect key="frame" x="138" y="83" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="YellowMonster.png" translatesAutoresizingMaskIntoConstraints="NO" id="l5s-dN-W9b">
+                                <rect key="frame" x="242" y="83" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BlueMonster.png" translatesAutoresizingMaskIntoConstraints="NO" id="RB8-H8-ppA">
+                                <rect key="frame" x="79" y="136" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BlueMonster.png" translatesAutoresizingMaskIntoConstraints="NO" id="cl5-wu-DNh">
+                                <rect key="frame" x="197" y="136" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GreenMonster.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ez3-UY-5Ni">
+                                <rect key="frame" x="79" y="189" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GreenMonster.png" translatesAutoresizingMaskIntoConstraints="NO" id="fD3-YO-b3p">
+                                <rect key="frame" x="197" y="189" width="45" height="45"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bullets.png" translatesAutoresizingMaskIntoConstraints="NO" id="jNU-IB-zDW">
+                                <rect key="frame" x="51" y="559" width="6" height="21"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bullets.png" translatesAutoresizingMaskIntoConstraints="NO" id="nL5-tC-on9">
+                                <rect key="frame" x="124" y="9" width="6" height="21"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bullets.png" translatesAutoresizingMaskIntoConstraints="NO" id="A0g-PM-sW4">
+                                <rect key="frame" x="157" y="9" width="6" height="21"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Lose!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="010-mM-9mA">
+                                <rect key="frame" x="26" y="351" width="274" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sP-i0-srF">
+                                <rect key="frame" x="129" y="403" width="63" height="30"/>
+                                <state key="normal" title="Shoot">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Shoot:" destination="iCl-Yz-DP4" eventType="touchUpInside" id="xak-R6-C4i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="Bullet" destination="n9f-cu-t6H" id="e2u-at-DAf"/>
+                        <outlet property="Exit" destination="JCo-DR-FV6" id="d8E-Ji-cSQ"/>
+                        <outlet property="Monster1" destination="28b-md-EmQ" id="4hm-EU-7Q7"/>
+                        <outlet property="Monster10" destination="fD3-YO-b3p" id="f0v-5u-kTe"/>
+                        <outlet property="Monster2" destination="pPe-qV-IKn" id="bW2-ks-2RM"/>
+                        <outlet property="Monster3" destination="xM6-sx-5Zk" id="DPj-I4-2nj"/>
+                        <outlet property="Monster4" destination="6wS-GR-2FK" id="o9A-8R-mcK"/>
+                        <outlet property="Monster5" destination="hyn-gE-Uxi" id="0uL-ZT-zzg"/>
+                        <outlet property="Monster6" destination="l5s-dN-W9b" id="VXD-xg-RB5"/>
+                        <outlet property="Monster7" destination="RB8-H8-ppA" id="lKK-4a-Dn3"/>
+                        <outlet property="Monster8" destination="cl5-wu-DNh" id="e7z-q2-HrH"/>
+                        <outlet property="Monster9" destination="Ez3-UY-5Ni" id="Vap-Cl-nVk"/>
+                        <outlet property="MonsterBullet" destination="jNU-IB-zDW" id="KRi-xq-BhD"/>
+                        <outlet property="MonsterBullet2" destination="nL5-tC-on9" id="fh5-PX-0p7"/>
+                        <outlet property="MonsterBullet3" destination="A0g-PM-sW4" id="A58-Cz-kY3"/>
+                        <outlet property="Ship" destination="YGD-o8-rA7" id="ahp-CO-KmQ"/>
+                        <outlet property="Shoot" destination="7sP-i0-srF" id="Kqq-C9-xRa"/>
+                        <outlet property="Start" destination="LuT-Kw-QRv" id="092-Ll-nXB"/>
+                        <outlet property="WinOrLose" destination="010-mM-9mA" id="FIy-CB-eh8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zFK-vt-xVJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708" y="9"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BlueMonster.png" width="20" height="20"/>
+        <image name="Bullets.png" width="10" height="10"/>
+        <image name="GreenMonster.png" width="20" height="20"/>
+        <image name="MainMenu.png" width="320" height="568"/>
+        <image name="Ship.png" width="20" height="20"/>
+        <image name="YellowMonster.png" width="20" height="20"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
